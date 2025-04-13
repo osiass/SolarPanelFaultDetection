@@ -34,7 +34,7 @@ def predict_frame(model, frame, transform, device):
     return predicted.item()
 
 
-cap = cv2.VideoCapture("http://192.168.1.213:8080/video")
+cap = cv2.VideoCapture("http://RASPPI IP:PORT/?action=stream")
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 model.to(device)
 
